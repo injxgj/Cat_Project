@@ -1,0 +1,84 @@
+:root {
+  --color-mode: 'light';
+  --color-dark: black;
+  --color-light: white;
+  --background: white;
+  --text-color: black;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-color);
+  transition: background 500ms ease-in-out, color 200ms ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-mode: 'dark';
+  }
+
+  :root:not([data-user-color-scheme]) {
+    --background: var(--color-dark);
+    --text-color: var(--color-light);
+  }
+}
+
+[data-user-color-scheme='dark'] {
+  --background: var(--color-dark);
+  --text-color: var(--color-light);
+}
+
+.searching_section {
+  width: 100%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.search_box_wrapper {
+  margin: 1rem 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.search_box {
+  font-size: 2rem;
+  width: 60%;
+}
+
+.btn_random {
+  font-size: 3rem;
+}
+
+.result_section {
+  margin: 1rem;
+}
+.result_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cat_card {
+  display: flex;
+  flex-direction: column;
+
+  width: 16rem;
+  height: 24rem;
+}
+.card_image {
+  height: 70%;
+}
+
+.btn_darkmode {
+  font-size: 3rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 3;
+}
+
+.btn_darkmode:hover {
+  cursor: pointer;
+  transition: 0.5s;
+}
