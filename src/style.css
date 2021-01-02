@@ -59,6 +59,24 @@ body {
   justify-content: space-between;
 }
 
+.empty_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.empty_msg {
+  font-size: 2rem;
+  margin-top: 100px;
+}
+
+.img_emptybox {
+  margin-top: 20px;
+  width: 16rem;
+  height: 16rem;
+}
 .cat_card {
   display: flex;
   flex-direction: column;
@@ -68,6 +86,89 @@ body {
 }
 .card_image {
   height: 70%;
+}
+
+.spinner_wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(255, 255, 255, 0.7);
+}
+
+.img_spinner {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 49%;
+}
+
+.modal_wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+.modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  width: 30%;
+  height: 70%;
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+.modal_header {
+  margin: 10px 10px;
+  display: flex;
+  flex-direction: row;
+  height: 1.5rem;
+}
+.modal_title {
+  font-size: 1.5rem;
+}
+
+.modal_close {
+  position: absolute;
+  right: 10px;
+  font-size: 1.5rem;
+}
+.modal_close:hover {
+  cursor: pointer;
+}
+
+.modal_image {
+  height: 70%;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .btn_darkmode {
