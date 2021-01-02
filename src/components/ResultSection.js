@@ -1,5 +1,6 @@
 import { getItem } from '../utils/sessionStorage.js';
 import Card from './Card.js';
+import { lazyLoad } from '../utils/lazyLoad.js';
 
 export default class ResultSection {
   constructor(props) {
@@ -13,8 +14,9 @@ export default class ResultSection {
     $target.appendChild(this.section);
 
     this.render();
+      lazyLoad();
   }
-  render() {
+    lazyLoad();
     const wrapper = document.createElement('div');
     wrapper.classList.add('result_wrapper');
 

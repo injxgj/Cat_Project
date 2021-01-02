@@ -19,7 +19,6 @@ export default class Card {
     cardImage.classList.add('card_image');
     cardImage.classList.add('lazy');
     cardImage.dataset.src = url;
-    cardImage.src = url;
 
     const cardInfo = document.createElement('article');
     // cardInfo.classList.add('card_info');
