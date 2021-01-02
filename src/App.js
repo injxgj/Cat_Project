@@ -33,10 +33,16 @@ export default class App {
     const resultSection = new ResultSection({
       $target,
       data,
-      onClick: async data => {},
+      onClick: data => {
+        detailModal.setState(data);
+      },
       onScroll: () => {},
     });
     const loading = new Loading({ $target });
+    const detailModal = new DetailModal({
+      $target,
+    });
+
     const darkmodeBtn = document.createElement('span');
     darkmodeBtn.innerText = '🌕';
     darkmodeBtn.classList.add('btn_darkmode');

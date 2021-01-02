@@ -28,6 +28,13 @@ export default class ResultSection {
           data: cat,
         });
       });
+
+      wrapper.addEventListener('click', e => {
+        e.stopPropagation();
+        const modalData = data.filter(cur => cur.id === e.target.parentNode.dataset.id)[0];
+        this.onClick(modalData);
+      });
+    }
     }
     this.section.appendChild(wrapper);
   }
