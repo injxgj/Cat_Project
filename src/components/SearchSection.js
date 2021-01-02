@@ -29,5 +29,12 @@ export default class SearchSection {
     randomBtn.addEventListener('click', this.onRandom);
 
     this.section.appendChild(wrapper);
+
+    searchBox.addEventListener('keyup', e => {
+      if (e.keyCode === 13) {
+        this.recent = e.target.value;
+        this.onSearch(this.recent);
+      }
+    });
   }
 }
