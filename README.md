@@ -1,4 +1,20 @@
 # cat_project
-2020 Devmatching 프로젝트 복기 용으로 되어있는 오픈소스 프로젝트 참고해서 내 스타일로 만들어 보는 중
 
-## 
+2020 Devmatching 프로젝트 복기 용으로 되어있는 오픈소스 프로젝트 참고하여 재구현 해보았다.
+참고: https://github.com/woohyeonjo/ilovecat-javascript
+
+## 개발환경
+
+- babel, eslint, [`Web Server for Chrome`](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
+  - FrontEnd 학습에 집중하기 위해 Web Server for Chrome을 이용함 (위에 링크에 들어가서 크롬 익스텐션을 설치하고 폴더가 저장되어있는 위치를 지정하여 설정해놓은 링크로 접속하면 됨.
+  - Vanila JavaScript만을 사용하여 구현
+
+## 구현 포인트
+
+- 퍼블리싱: 시맨틱 웹, 반응형
+- 로딩 화면 & 결과 없음 기능
+- 상세정보 Modal 만들기
+- LazyLoading 기능
+- 새로 고침 후에도 결과 화면 유지
+- 무한 스크롤 기능
+- 비동기 요청 에러 핸들링

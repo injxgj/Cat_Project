@@ -59,6 +59,9 @@ export default class DetailModal {
     modalImg.src = url;
     modal.appendChild(modalImg);
 
+    const modalSummary = document.createElement('article');
+    modal.appendChild(modalSummary);
+
     closeBtn.addEventListener('click', e => {
       this.onClose();
     });

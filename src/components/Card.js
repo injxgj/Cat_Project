@@ -3,7 +3,7 @@ export default class Card {
     const { $target, data } = props;
     this.data = data;
 
-    this.card = document.createElement('article');
+    this.card = document.createElement('div');
     this.card.classList.add('cat_card');
     this.card.dataset.id = data.id;
 
