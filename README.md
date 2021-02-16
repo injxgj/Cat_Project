@@ -12,7 +12,7 @@
 ## 구현 포인트
 
 - [퍼블리싱: 시맨틱 웹, 반응형](https://www.notion.so/168c68dda14a47c9a5bb92e4f60eb3aa)
-- 로딩 화면 & 결과 없음 기능
+- [로딩 화면 & 결과없음 화면](https://www.notion.so/Event-Loop-Class-72ba13d5b02a42d6b62cf686eae01500)
 - 상세정보 Modal 만들기
 - LazyLoading 기능
 - 새로 고침 후에도 결과 화면 유지
