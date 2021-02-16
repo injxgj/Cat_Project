@@ -11,7 +11,7 @@
 
 ## 구현 포인트
 
-- 퍼블리싱: 시맨틱 웹, 반응형
+- [퍼블리싱: 시맨틱 웹, 반응형](https://www.notion.so/168c68dda14a47c9a5bb92e4f60eb3aa)
 - 로딩 화면 & 결과 없음 기능
 - 상세정보 Modal 만들기
 - LazyLoading 기능
