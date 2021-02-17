@@ -11,9 +11,10 @@
 
 ## 구현 포인트
 
+- [파일 & 컴포넌트 구조](https://www.notion.so/c6586bac0e7f4f4a967000b75a9257a2)
 - [퍼블리싱: 시맨틱 웹, 반응형](https://www.notion.so/168c68dda14a47c9a5bb92e4f60eb3aa)
 - [로딩 화면 & 결과없음 화면](https://www.notion.so/Event-Loop-Class-72ba13d5b02a42d6b62cf686eae01500)
-- 상세정보 Modal 만들기
+- [상세정보 Modal 만들기](https://www.notion.so/Modal-03b8d2b800264a1890e5cd41ee5de2d1)
 - LazyLoading 기능
 - 새로 고침 후에도 결과 화면 유지
 - 무한 스크롤 기능
