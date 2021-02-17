@@ -16,9 +16,11 @@ export default class DetailModal {
   }
 
   setState(data) {
-    this.toggleModal();
     this.data = data;
-    this.render();
+    if (data) {
+      this.toggleModal();
+      this.render();
+    }
   }
 
   onClose() {
@@ -28,7 +30,7 @@ export default class DetailModal {
   }
 
   render() {
-    const { url } = this.data ;
+    const { url } = this.data;
     const { name, origin, temperament } = this.data.breeds[0] ? this.data.breeds[0] : { name: '정보없음', origin: '정보없음', temperament: '정보없음' };
     const { imperial, metric } = this.data.breeds[0] ? this.data.breeds[0].weight : { imperial: '정보없음', metric: '정보없음' };
 
@@ -80,8 +82,8 @@ export default class DetailModal {
     closeBtn.addEventListener('click', e => {
       this.onClose();
     });
-    overlay.addEventListener('click', e=> {
+    overlay.addEventListener('click', e => {
       this.onClose();
-    })
+    });
   }
 }
