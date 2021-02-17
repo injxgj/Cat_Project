@@ -41,8 +41,10 @@ export default class ResultSection {
 
       wrapper.addEventListener('click', e => {
         e.stopPropagation();
-        const modalData = data.filter(cur => cur.id === e.target.parentNode.dataset.id)[0];
-        this.onClick(modalData);
+        if (e.target !== e.currentTarget) {
+          const modalData = data.filter(cur => cur.id === e.target.parentNode.dataset.id)[0];
+          this.onClick(modalData);
+        }
       });
     } else {
       wrapper.classList.add('empty_wrapper');

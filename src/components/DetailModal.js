@@ -28,7 +28,7 @@ export default class DetailModal {
   }
 
   render() {
-    const { url } = this.data;
+    const { url } = this.data ;
     const { name, origin, temperament } = this.data.breeds[0] ? this.data.breeds[0] : { name: '정보없음', origin: '정보없음', temperament: '정보없음' };
     const { imperial, metric } = this.data.breeds[0] ? this.data.breeds[0].weight : { imperial: '정보없음', metric: '정보없음' };
 
@@ -60,10 +60,28 @@ export default class DetailModal {
     modal.appendChild(modalImg);
 
     const modalSummary = document.createElement('article');
+    modalSummary.className = 'modal_summary';
+
+    const catOrigin = document.createElement('p');
+    catOrigin.innerText = origin;
+
+    const catTemperament = document.createElement('p');
+    catTemperament.innerText = temperament;
+
+    const catWeight = document.createElement('p');
+    catWeight.innerText = `${imperial} (imperial) / ${metric} (metric)`;
+
+    modalSummary.appendChild(catOrigin);
+    modalSummary.appendChild(catTemperament);
+    modalSummary.appendChild(catWeight);
+
     modal.appendChild(modalSummary);
 
     closeBtn.addEventListener('click', e => {
       this.onClose();
     });
+    overlay.addEventListener('click', e=> {
+      this.onClose();
+    })
   }
 }
