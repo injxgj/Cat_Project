@@ -62,11 +62,5 @@ export default class ResultSection {
       wrapper.appendChild(emptyBoxImage);
     }
     this.section.appendChild(wrapper);
-
-    const bottom = document.createElement('div');
-    bottom.className = 'bottom';
-    this.section.appendChild(bottom);
-
-    this.scrollFetch(this);
   }
 }

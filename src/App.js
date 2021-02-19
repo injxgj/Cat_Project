@@ -45,7 +45,11 @@ export default class App {
       },
       onScroll: () => {},
     });
-    // scrollFetch(resultSection, loading);
+    const bottom = document.createElement('div');
+    bottom.className = 'bottom';
+    $target.appendChild(bottom);
+
+    scrollFetch(loading, resultSection);
 
     const darkmodeBtn = document.createElement('span');
     darkmodeBtn.innerText = '🌕';
