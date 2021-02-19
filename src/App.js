@@ -19,21 +19,27 @@ export default class App {
       keywords,
       onSearch: async keyword => {
         loading.toggleSpinner();
-        const response = await api.fetchCats(keyword);
-        if (!response.isError) {
+        try {
+          const response = await api.fetchCats(keyword);
           setItem('data', response.data);
           resultSection.setState();
+          loading.toggleSpinner();
+        } catch (e) {
+          console.error(e);
+          loading.toggleSpinner();
         }
-        loading.toggleSpinner();
       },
       onRandom: async keyword => {
         loading.toggleSpinner();
-        const response = await api.fetchRandomCats(keyword);
-        if (!response.isError) {
+        try {
+          const response = await api.fetchRandomCats(keyword);
           setItem('data', response.data);
           resultSection.setState();
+          loading.toggleSpinner();
+        } catch (e) {
+          console.error(e);
+          loading.toggleSpinner();
         }
-        loading.toggleSpinner();
       },
     });
     const resultSection = new ResultSection({

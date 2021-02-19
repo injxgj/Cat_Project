@@ -1,16 +1,22 @@
 /* eslint-disable no-useless-catch */
 const API_ENDPOINT = 'https://api.thecatapi.com/v1';
 
-const request = function (url) {
-  const dto = fetch(url)
-    .then(response => {
-      const data = response.json();
+const request = async url => {
+  try {
+    const response = await fetch(url);
+    if (response.ok) {
+      const data = await response.json();
       return data;
-    })
-    .catch(err => {
-      console.error(err);
-    });
-  return dto;
+    } else {
+      const errorData = await response.json();
+      throw errorData;
+    }
+  } catch (e) {
+    throw {
+      message: e.message,
+      status: e.status,
+    };
+  }
 };
 
 export const api = {
@@ -28,9 +34,8 @@ export const api = {
         data: result,
       };
     } catch (e) {
-      return {
-        isError: true,
-        data: e,
+      throw {
+        message: e,
       };
     }
   },
@@ -42,9 +47,8 @@ export const api = {
         data: result,
       };
     } catch (e) {
-      return {
-        isError: true,
-        data: e,
+      throw {
+        message: e,
       };
     }
   },
