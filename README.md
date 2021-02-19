@@ -17,5 +17,5 @@
 - [상세정보 Modal 만들기](https://www.notion.so/Modal-03b8d2b800264a1890e5cd41ee5de2d1)
 - [LazyLoading 기능](https://www.notion.so/LazyLoading-a2947a87cdf447b48d280c0d5b6ec6b6)
 - [새로고침 후에도 결과 화면 유지](https://www.notion.so/1a3d573e400a4da092592e8da99530bd)
-- 무한 스크롤 기능
+- [무한 스크롤 기능](https://www.notion.so/9f2a8e4c5a014b4baf65bf2c408245a0)
 - 비동기 요청 에러 핸들링
