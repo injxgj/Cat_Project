@@ -4,16 +4,17 @@ import { lazyLoad } from '../utils/lazyLoad.js';
 
 export default class ResultSection {
   constructor(props) {
-    const { $target, data, onClick, onScroll } = props;
+    const { $target, data, onClick, onScroll, scrollFetch } = props;
     this.data = data;
     this.onClick = onClick;
     this.onScroll = onScroll;
+    this.scrollFetch = scrollFetch;
     this.section = document.createElement('section');
     this.section.classList.add('result_section');
 
     $target.appendChild(this.section);
 
-    if (data.length > 0) {
+    if (data && data.length > 0) {
       this.render();
       lazyLoad();
     }
@@ -61,5 +62,11 @@ export default class ResultSection {
       wrapper.appendChild(emptyBoxImage);
     }
     this.section.appendChild(wrapper);
+
+    const bottom = document.createElement('div');
+    bottom.className = 'bottom';
+    this.section.appendChild(bottom);
+
+    this.scrollFetch(this);
   }
 }

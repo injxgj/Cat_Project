@@ -4,11 +4,16 @@ import Loading from './components/Loading.js';
 import ResultSection from './components/ResultSection.js';
 import SearchSection from './components/SearchSection.js';
 import DetailModal from './components/DetailModal.js';
+import { scrollFetch } from './utils/scrollFetch.js';
 
 export default class App {
   constructor($target) {
     const keywords = getItem('keywords');
     const data = getItem('data');
+    const loading = new Loading({ $target });
+    const detailModal = new DetailModal({
+      $target,
+    });
     const serchSection = new SearchSection({
       $target,
       keywords,
@@ -34,15 +39,13 @@ export default class App {
     const resultSection = new ResultSection({
       $target,
       data,
+      scrollFetch: scrollFetch.bind(null, loading),
       onClick: data => {
         detailModal.setState(data);
       },
       onScroll: () => {},
     });
-    const loading = new Loading({ $target });
-    const detailModal = new DetailModal({
-      $target,
-    });
+    // scrollFetch(resultSection, loading);
 
     const darkmodeBtn = document.createElement('span');
     darkmodeBtn.innerText = '🌕';
