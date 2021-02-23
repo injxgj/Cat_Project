@@ -11,7 +11,9 @@ function setItem(key, value) {
 }
 
 function addItem(key, value) {
-  value = [...getItem(key), ...value];
+  if (getItem(key) !== null && getItem(key).length > 0) {
+    value = [...getItem(key), ...value];
+  }
   const toJson = JSON.stringify(value);
   sessionStorage.setItem(key, toJson);
 }
