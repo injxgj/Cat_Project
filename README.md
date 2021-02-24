@@ -18,4 +18,4 @@
 - [LazyLoading 기능](https://www.notion.so/LazyLoading-a2947a87cdf447b48d280c0d5b6ec6b6)
 - [새로고침 후에도 결과 화면 유지](https://www.notion.so/1a3d573e400a4da092592e8da99530bd)
 - [무한 스크롤 기능](https://www.notion.so/9f2a8e4c5a014b4baf65bf2c408245a0)
-- 비동기 요청 에러 핸들링
+- [비동기 요청 에러 핸들링](https://www.notion.so/4e6d18e5805849af9077254ab35ce40e)
