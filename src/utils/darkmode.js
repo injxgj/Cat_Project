@@ -23,7 +23,7 @@ function getPreferedColor() {
   return response;
 }
 
-const toggleDarkmode = function () {
+export const toggleDarkmode = function () {
   let currentMode = getCurrentMode();
 
   if (!currentMode) {
@@ -37,8 +37,3 @@ const toggleDarkmode = function () {
     applyDarkMode('light');
   }
 };
-
-const darkmodeBtn = document.querySelector('.btn_darkmode');
-darkmodeBtn.addEventListener('click', e => {
-  toggleDarkmode();
-});

@@ -5,6 +5,7 @@ import ResultSection from './components/ResultSection.js';
 import SearchSection from './components/SearchSection.js';
 import DetailModal from './components/DetailModal.js';
 import { scrollFetch } from './utils/scrollFetch.js';
+import { toggleDarkmode } from './utils/darkmode.js';
 
 export default class App {
   constructor($target) {
@@ -61,5 +62,8 @@ export default class App {
     darkmodeBtn.innerText = '🌕';
     darkmodeBtn.classList.add('btn_darkmode');
     $target.appendChild(darkmodeBtn);
+    darkmodeBtn.addEventListener('click', e => {
+      toggleDarkmode();
+    });
   }
 }
